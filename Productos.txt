@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Jabon",
+    "price": 300,
+    "thumbnail": "url",
+    "id": 3
+  },
+  {
+    "title": "Esponja",
+    "price": 500,
+    "url": "fdsjfsj",
+    "id": 4
+  },
+  {
+    "title": "papel higienico",
+    "price": 1500,
+    "url": "fdsjfsj",
+    "id": 5
+  },
+  {
+    "title": "Cebolla",
+    "price": 350,
+    "url": "fdsjfsj",
+    "id": 6
+  },
+  {
+    "title": "Teclado",
+    "price": 13590,
+    "url": "fdsjfsj",
+    "id": 7
+  },
+  {
+    "title": "Caca de bebe",
+    "price": 9999,
+    "url": "fdsjfsj",
+    "id": 8
+  },
+  {
+    "title": "cigarrillo",
+    "price": 58,
+    "url": "fdsjfsj",
+    "id": 9
+  }
+]
