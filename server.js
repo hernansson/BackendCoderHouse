@@ -1,8 +1,12 @@
 
+
 const express = require('express')
-const path = require('path')
+
 const app = express()
-const fs = require('fs')
+const { Router } = express
+const router = new Router()
+const routerProductos = require('./routes/productos')
+
 
 
 class Contenedor {
@@ -95,22 +99,15 @@ function getRndInteger(min, max) {
 const PORT = process.env.PORT || 8080
 const contenedor = new Contenedor("Productos")
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'))
+router.get("/", (req, res) => {
+    res.sendFile((__dirname + '/src/index.html'))
 
 })
 
-app.get("/productos", (req, res) => {
-    //res.sendFile(path.join(__dirname + '/index.html'))
-    res.send(contenedor.getAll())
-})
 
-app.get("/productoRandom", (req, res) => {
-    let prods = contenedor.getAll()
-    let randomIndex = getRndInteger(0, prods.length - 1)
-    res.send(prods[randomIndex])
-})
 
+app.use('/', router)
+app.use('/api/productos', routerProductos)
 
 app.listen(PORT, () => {
     console.log("Server running on port 8080")
